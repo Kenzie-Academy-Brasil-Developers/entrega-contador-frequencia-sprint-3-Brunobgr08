@@ -1,0 +1,125 @@
+ /* RESETS */ 
+ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-lato);
+    list-style: none;
+    text-decoration: none;
+}
+figcaption{
+    display: none;
+}
+img{
+    max-width: 100%;
+}
+
+body{
+    background-color: rgba(158, 248, 218, 0.883);
+}
+.header{
+    padding-top: 10px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.header__h1{
+    font-size: 1.8em;
+    font-weight: 700;
+    color: rgb(23, 23, 248);   
+}
+.textarea__containerContador{
+    margin-top: 20px;
+    font-size: 0.9em;
+    background-color: rgb(241, 241, 241);
+}
+.containerContador{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}   
+.resultados__containerContador{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+}
+.blocoLetras__Resultados, .blocoWords__Resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerContador h3{
+    padding: 5px 2px;
+    margin: 5px auto;
+    font-style: italic;
+    background-color: rgba(0, 255, 255, 0.883);
+    border-radius: 50%;
+}
+.button__containerContador{
+    max-width: 180px;
+    font-size: 0.7em;
+    padding: 5px 15px;
+    appearance: auto;
+    color: -internal-light-dark(black, white);
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    align-self: flex-end;
+    cursor: default;
+    background-color: rgb(230, 230, 230);
+    box-sizing: border-box;
+    margin: 0em;
+    margin-bottom: 5px;
+    font: 400 13.3333px Arial;
+    border-width: 2px;
+    border-color: rgb(133, 133, 133);
+    border-radius: 5px;
+    border-style: outset;
+    border-image: initial;
+}
+.divLetter__containerContador, .divWord__containerContador{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 280px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+.span__containerContador{
+    margin-left: 10px;
+}
+
+
+@media screen and (min-width: 768px){
+    .textarea__containerContador{
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .containerContador{
+        align-items: center;
+    }
+    .resultados__containerContador{
+        flex-direction: row;
+        padding-top: 15px;
+    }
+    .button__containerContador{
+        align-self: center;
+    }
+}
+@media screen and (min-width: 1024px){
+        
+    .header{
+        height: 80px;
+    }
+    .header__h1{
+        font-size: 2.8em;  
+    }   
+    .resultados__containerContador{
+        width: 800px;
+        justify-content: space-between;
+    }
+}
