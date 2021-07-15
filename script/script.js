@@ -1,7 +1,7 @@
 
 
-const letterCounts = {};
-const wordsCounts = {};
+let letterCounts = {};
+let wordsCounts = {};
 let typedText;
 
 const button = document.getElementById("countButton");
@@ -16,6 +16,8 @@ function carregarTexto(){
 }
 
 function letterCount(){
+
+   letterCounts = {};
 
    let typedTextNonSpace = typedText.replace(/\s+/g, '');
    
@@ -33,6 +35,8 @@ function letterCount(){
 
 function wordCount(){
 
+   wordsCounts = {};
+
    let typedWords = typedText.split(" ");
 
    for (let i = 0; i < typedWords.length; i++){
@@ -47,9 +51,25 @@ function wordCount(){
    }
 }
 
+function limparAll(){
+
+   const letras = document.getElementById("lettersDiv");
+   while (letras.firstChild){
+      letras.removeChild(letras.lastChild);
+   }
+
+   const palavras = document.getElementById("wordsDiv");
+   while (palavras.firstChild){
+      palavras.removeChild(palavras.lastChild);
+   }
+
+}
+
+
 
 function mostrarNaTela(){
 
+   limparAll();
    
    carregarTexto();
 
